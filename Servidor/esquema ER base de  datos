@@ -1,0 +1,79 @@
+Conceptualiza un esquema E/R de datos para phpMyAdmin para videojuegos que tenga las siguientes características:
+
+Quiero almacenar datos de los juegos, consolas, periféricos de las mísmas, material promocional, sagas de juegos y desarrolladoras y distribuidoras de los juegos. En todos los casos, puedo tener el juego o no (de ahi que muchos de los datos puedan estar en estado Null)
+
+Juegos:
+• Identificador del juego (clave primaria, no admite nulo).
+• Nombre del juego (texto de cualquier tipo, no admite nulo).
+• Numero de serie (cada consola tiene su formato, clave única, admite nulo).
+• Identificador de la saga a la que pertenece (clave foránea, no admite nulo).
+• Identificador de desarrolladora a la que pertenece (clave foránea, no admite nulo).
+• Identificador de la distribuidora a la que pertenece (clave foránea, no admite nulo).
+• Identificador de la consola a la que pertenece (clave foránea, no admite nulo).
+• Region (las únicas opciones son PAL, PAL(ES), PAL(UK), PAL(NE), PAL(FR), NTSC-J o NTSC-U).
+• Fecha de compra (Admite solo año, fecha exacta o nulo).
+• Medio de obtencion (texto de cualquier tipo, admite nulo).
+• Precio de compra en € (no admite negativos, tiene que ser de 0 hasta 999.999 con 2 decimales, admite nulo).
+• Precio medio en el mercado (valor medido externamente, admite nulo).
+• Nota del estado (del 0 al 10 admitiendo 2 decimales, admite nulo).
+• Estado, que se establecerá automaticamente según la nota del estado, rigiendose por esta formula hecha en google sheets: =ARRAYFORMULA(SI(A2:A=""; ""; SI(H2:H=""; "Ausente"; SI(H2:H=10; "Perfecto"; SI(H2:H>=7; "Aceptable"; SI(H2:H>=5; "Regulero"; SI(H2:H>0; "Deficiente"; SI(H2:H=0; "Material"; "")))))))) (no admite nulo).
+• Comentarios sobre la unidad obtenida (admite nulo).
+
+Sagas:
+• Identificador de la saga (clave primaria, no admite nulo).
+• Nombre de la saga (clave única, no admite nulo).
+
+Desarrolladoras:
+• Identificador de la desarrolladora (clave primaria, no admite nulo).
+• Nombre de la desarrolladora (clave única, no admite nulo).
+
+Distribuidoras:
+• Identificador de la distribuidora (clave primaria, no admite nulo).
+• Nombre de la distribuidora (clave única, no admite nulo).
+
+Empresas:
+• Identificador de la empresa (clave primaria, no admite nulo).
+• Nombre de la empresa (clave única, no admite nulo).
+
+Consolas:
+• Identificador de la consola (clave primaria, no admite nulo).
+• Nombre de la consola (texto de cualquier tipo, no admite nulo).
+• Submodelo de la consola (que sea texto de cualquier tipo, no admite nulo).
+• Numero de serie (cada consola tiene su formato, clave única, admite nulo).
+• Identificador de la empresa a la que pertenece (clave foránea, no admite nulo).
+• Region (Siendo las únicas opciones PAL, NTSC-J o NTSC-U).
+• Fecha de compra (Admite solo año, fecha exacta o nulo).
+• Medio de obtencion (texto de cualquier tipo, admite nulo).
+• Precio de compra en € (no admite negativos, tiene que ser de 0 hasta 999.999 con 2 decimales, admite nulo).
+• Precio medio en el mercado (valor medido externamente, admite nulo).
+• Nota del estado (del 0 al 10 admitiendo 2 decimales, admite nulo).
+• Estado, que se establecerá automaticamente según la nota del estado, rigiendose por esta formula hecha en google sheets: =ARRAYFORMULA(SI(A2:A=""; ""; SI(H2:H=""; "Ausente"; SI(H2:H=10; "Perfecto"; SI(H2:H>=7; "Aceptable"; SI(H2:H>=5; "Regulero"; SI(H2:H>0; "Deficiente"; SI(H2:H=0; "Material"; "")))))))) (no admite nulo).
+• Comentarios sobre la unidad obtenida (admite nulo).
+
+Perifericos:
+• Identificador del periferico (clave primaria, no admite nulo).
+• Nombre del periferico (que sea texto de cualquier tipo, no admite nulo).
+• Numero de serie (cada uno tiene su formato, admite nulo).
+• Identificador de la consola a la que pertenece (clave foranea, admite nulo).
+• Tipo de periferico (define tu que tipo de periferico puede haber, piensa que entran desde mandos, hasta camaras o soportes, tarjetas de memoria, y mucho mas)
+• Fecha de compra (Admite solo año, fecha exacta o nulo).
+• Medio de obtencion (texto de cualquier tipo, admite nulo).
+• Precio de compra en € (no admite negativos, tiene que ser de 0 hasta 999.999 con 2 decimales, admite nulo).
+• Precio medio en el mercado (valor medido externamente, admite nulo).
+• Nota del estado (del 0 al 10 admitiendo 2 decimales, admite nulo).
+• Estado, que se establecerá automaticamente según la nota del estado, rigiendose por esta formula hecha en google sheets: =ARRAYFORMULA(SI(A2:A=""; ""; SI(H2:H=""; "Ausente"; SI(H2:H=10; "Perfecto"; SI(H2:H>=7; "Aceptable"; SI(H2:H>=5; "Regulero"; SI(H2:H>0; "Deficiente"; SI(H2:H=0; "Material"; "")))))))) (no admite nulo).
+• Comentarios sobre la unidad obtenida (admite nulo).
+
+Material promocional:
+• Identificador del material (clave primaria, no admite nulo).
+• Nombre del material (que sea texto de cualquier tipo, no admite nulo).
+• Tipo de material (Define tu que tipos de materiales podría haber, ten encuenta que aqui entran CDs o DVDs promocionales, figuras oficiales de reserva o ediciones exclusivas, discos de música oficiales, y cosas parecidas).
+• Identificador de  la saga a la que pertenece (clave foranea, no admite nulo).
+• Identificador del juego al que pertenece (clave foranea, admite nulo).
+• Fecha de compra (Admite solo año, fecha exacta o nulo).
+• Medio de obtencion (texto de cualquier tipo, admite nulo).
+• Precio de compra en € (no admite negativos, tiene que ser de 0 hasta 999.999 con 2 decimales, admite nulo).
+• Precio medio en el mercado (valor medido externamente, admite nulo).
+• Nota del estado (del 0 al 10 admitiendo 2 decimales, admite nulo).
+• Estado, que se establecerá automaticamente según la nota del estado, rigiendose por esta formula hecha en google sheets: =ARRAYFORMULA(SI(A2:A=""; ""; SI(H2:H=""; "Ausente"; SI(H2:H=10; "Perfecto"; SI(H2:H>=7; "Aceptable"; SI(H2:H>=5; "Regulero"; SI(H2:H>0; "Deficiente"; SI(H2:H=0; "Material"; "")))))))) (no admite nulo).
+• Comentarios sobre la unidad obtenida (admite nulo).
