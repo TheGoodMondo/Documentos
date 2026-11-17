@@ -1,0 +1,11 @@
+Corre en Proxmox (virtualizacion de nivel 1)
+TeamSpeak 6 (Discord privado)
+Servicio RSS
+Jellyfin (musica, series y pelis)
+ARR suite (Radar / Sonar / etc)
+Next Cloud (archivos usando de nube el server)
+Servidor de BeamMP.Drive
+Carpeta compartida por Samba
+
+
+    zum
