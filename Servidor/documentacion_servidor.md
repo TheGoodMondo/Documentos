@@ -106,13 +106,13 @@ Esta es una subred de la red principal.
 **Sesión de adminsitración del router**
 
 * Nombre de usuario - big\_boss
-* Contraseña - Sh0w;4d0
+* Contraseña - *****
 
 **Configuración red 2.4G**
 
 * Nombre de red - "Welcome\_to\_the\_cumzone_2.4G"
 * Seguridad - WPA3-Personal+WPA2-PSK[AES]
-* Contraseña -  Z4z2,ch2ch3
+* Contraseña -  *****
 * Banda - 2.4GHz
 * OFDMA
 * TWT
@@ -121,7 +121,7 @@ Esta es una subred de la red principal.
 
 * Nombre de red - "Welcome\_to\_the\_cumzone_5G"
 * Seguridad - WPA3-Personal+WPA2-PSK[AES]
-* Contraseña -  Z4z2,ch2ch3
+* Contraseña -  *****
 * Banda - 5GHz
 * OFDMA
 * TWT
@@ -130,14 +130,14 @@ Esta es una subred de la red principal.
 
 * Nombre de red - "Welcome\_to\_the\_cumzone_Guests"
 * Seguridad - WPA2/WPA3-Personal
-* Contraseña -  Apple esta sobrevalorado
+* Contraseña -  *****
 * Banda - 2.4GHz
 
 **Configuración red IoT**
 
 * Nombre de red - "Welcome\_to\_the\_cumzone_IoT"
 * Seguridad - WPA2/WPA3-Personal
-* Contraseña -  Z4z2,ch2ch3
+* Contraseña -  *****
 * Banda - 2.4GHz
 
 **Configuración DHCP**
@@ -203,7 +203,7 @@ Más información de documentación en la [ve.Proxmox.com](https://pve.proxmox.c
 **Sesión**
 
 * Usuario administrador - root
-* Contraseña administrador - Sn4k3;34t3r;Cynth14
+* Contraseña administrador - *****
 
 ## Máquina Debian Server 13:
 
@@ -212,9 +212,9 @@ En esta máquina estarán corriendo la inmensa mayoría de servicios.
 **Sesión**
 
 * Usuario administrador - root
-* Contraseña administrador - Sn4k3;34t3r;Cynth14
+* Contraseña administrador - *****
 * Usuario cliente - mondo-ds13
-* Contraseña cliente - 1Trixie3
+* Contraseña cliente - *****
 
 **Servicios:**  
 *Team Speak 6:*  
@@ -237,7 +237,7 @@ En esta máquina estarán corriendo los servicios web como el buscador SearXNG o
 * unprivileged container - *Si*
 * Nesting - *Si*
 * Usuario administrador - root
-* Contraseña administrador - G1mm13;6;D33W2nn
+* Contraseña administrador - *****
 
 
 ### Servicios de la máquina Web-Serices
@@ -248,7 +248,7 @@ SearXNG es un navegador de codigo abierto y privado para substituir Google o Duc
 #### phpMyAdmin
 phpMyAdmin es un sistema de bases de datos relacional basado en mysql y php
 Usuario: usumariadb
-Contraseña: b3A8m9b3A8m9
+Contraseña: *****
 
 ## 4.- Detalles extra
 
